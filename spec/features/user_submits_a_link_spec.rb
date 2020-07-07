@@ -23,7 +23,7 @@ RSpec.feature 'user submits a link' do
 			fill_in 'link_title', with: link_title
 			click_on 'Submit!'
 
-			expect(page).to have_content 'url cannot be blank'
+			expect(page).to have_content "Url can't be blank"
 		end
 
 

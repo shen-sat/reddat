@@ -8,9 +8,12 @@ class LinksController < ApplicationController
 	end
 
 	def create
-		puts params[:link]
-		link = Link.new(link_params)
-		redirect_to root_path if link.save
+		@link = Link.new(link_params)
+		if @link.save
+			redirect_to root_path
+		else
+			render :new
+		end
 	end
 
 	private

@@ -1,5 +1,6 @@
+<%= @link.errors.full_messages.first if @link.errors.any? %>
 <%= form_for @link do |form| %>
- <%= form.text_field :title, id: :link_title %>
- <%= form.text_field :url, id: :link_url %>
- <%= form.submit 'Submit!' %>
+ 	<%= form.text_field :title, id: :link_title %>
+ 	<%= form.text_field :url, id: :link_url %>
+ 	<%= form.submit 'Submit!' %>
 <% end %>
