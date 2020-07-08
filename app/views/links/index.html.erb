@@ -1,5 +1,16 @@
 <%= link_to "Submit a new link", new_link_path %>
 
-<% @links.each do |link| %>
-	<%= link_to link.title, link.url %>
-<% end %>
+
+<table>
+	<% @links.each do |link| %>
+		<tr id=<%= "link_id_#{link.id}" %>>
+			<td><%= link_to link.title, link.url %></td>
+			<td><%= link_to 'Upvote' %></td>
+			<td data-role='score' ><%= link.score %></td>	
+		</tr>
+	<% end %>
+</table>
+
+
+
+
